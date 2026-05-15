@@ -21,7 +21,7 @@ namespace XboxDesktopPets.ViewModels
                 Name = "Master Chief",
                 MoveSpeed = 5.0f,
                 IsFalling = false,
-                ImagePath = "Assets/Sprites/MasterChief_Idle.png",
+                ImagePath = "pack://application:,,,/Assets/Sprites/jefe_maestro.png",
                 SoundPath = "Assets/Sounds/Halo_Shield.wav",
                 Saga = Saga.Halo
             };

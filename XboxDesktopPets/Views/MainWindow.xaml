@@ -1,12 +1,25 @@
-﻿<Window x:Class="XboxDesktopPets.MainWindow"
+﻿<Window x:Class="XboxDesktopPets.Views.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:XboxDesktopPets"
+        xmlns:vm="clr-namespace:XboxDesktopPets.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Xbox Pet" Height="150" Width="150"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Topmost="True"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown">
 
+    <Window.DataContext>
+        <vm:CharacterViewModel/>
+    </Window.DataContext>
+
+    <Grid>
+        <Image Source="{Binding Character.ImagePath}"
+       Width="100"
+       Height="100"
+       Stretch="Uniform"/>
     </Grid>
 </Window>
